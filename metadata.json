@@ -8,11 +8,11 @@
   "project_page": "https://github.com/mevalke/puppet-puppetdb_ui",
   "issues_url": "https://github.com/mevalke/puppet-puppetdb_ui/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-    {"name":"puppetlabs-firewall","version_requirement":">= 1.12.0"}
-    {"name":"alexharvey-firewall_multi","version_requirement":">= 6.0.2"}
-    {"name":"puppetlabs-puppetdb","version_requirement":">= 1.0.0"}
-    {"name":"puppetlabs-apache","version_requirement":">= 3.1.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-firewall","version_requirement":">= 1.12.0"},
+    {"name":"alexharvey-firewall_multi","version_requirement":">= 6.0.2"},
+    {"name":"puppetlabs-puppetdb","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-apache","version_requirement":">= 3.1.0"},
     {"name":"puppet-puppetboard","version_requirement":">= 4.1.0"}
   ],
   "data_provider": null

@@ -12,7 +12,7 @@ class puppetdb_ui::puppetboard_def_vh {
     manage_virtualenv   => true,
     reports_count       => 40,
     groups              => 'puppet',
-    puppetdb_host       => $puppetdb_ui::pdb_postgres_host,
+    puppetdb_host       => '127.0.0.1',
     puppetdb_port       => 8080,
   }
   class { 'puppetboard::apache::conf': }

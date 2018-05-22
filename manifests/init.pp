@@ -43,7 +43,6 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 class puppetdb_ui {  
   $pdb_mode          = lookup(pdb_mode)
-  $pdb_postgres_host = lookup(pdb_postgres_host)
   
   case $pdb_mode {
    'pdb': {
@@ -59,6 +58,7 @@ class puppetdb_ui {
      }
    }
    'pm': {
+     $pdb_postgres_host = lookup(pdb_postgres_host)
      include puppetdb_ui::puppetdb_pm
    }
    default: {
