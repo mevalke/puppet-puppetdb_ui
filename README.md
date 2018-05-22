@@ -57,7 +57,6 @@ Setting up the parameters for the Puppetdb host.
 ```
 ---
 pdb_mode: 'pdb'
-pdb_postgres_host: '127.0.0.1'
 pdb_puppetserver: 'puppetserver.example.com'
 pdb_fw_on: true
 firewall_linux_ssh_access:
