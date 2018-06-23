@@ -3,9 +3,9 @@ class puppetdb_ui::puppetdb_setup {
     ensure => present
   }
   class {'puppetdb::server':
-    database_host => $puppetdb_ui::pdb_postgres_host,
+    database_host => '127.0.0.1',
   }
   class {'puppetdb::database::postgresql':
-    listen_addresses 	=> $puppetdb_ui::pdb_postgres_host,
+    listen_addresses 	=> '127.0.0.1',
   }
 }
