@@ -1,10 +1,13 @@
 class puppetdb_ui::puppetdb_setup {
- exec { disable_apt_cdrom_source:
+  exec { disable_apt_cdrom_source:
 	  command => "sed -i '/cdrom/s/^/#/g' /etc/apt/sources.list",
 	  onlyif  => "grep -E '^deb cdrom' /etc/apt/sources.list",
 	  path    => '/bin:/usr/bin:/usr/local/bin',
   } ->
-  class { 'apt': } ->
+  exec { update_apt_cache:
+          command => "apt-get update",
+          path    => '/bin:/usr/bin:/usr/local/bin',
+  } ->
   package {'apt-transport-https':
     ensure => present
   } ->
