@@ -5,7 +5,7 @@ class puppetdb_ui::puppetdb_setup {
 	  path    => '/bin:/usr/bin:/usr/local/bin',
   } ->
   exec { update_apt_cache:
-          command => "apt-get update",
+          command => "/usr/bin/apt-get update",
           path    => '/bin:/usr/bin:/usr/local/bin',
   } ->
   package {'apt-transport-https':
